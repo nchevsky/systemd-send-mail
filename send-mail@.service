@@ -1,0 +1,7 @@
+[Unit]
+Description=Send e-mail notifications
+Wants=network.target
+
+[Service]
+ExecStart=/etc/systemd/system/send-mail %i %H %u
+Type=oneshot
